@@ -1,6 +1,15 @@
 color trackColor;
 float closestX, closestY = 0;
 
+PImage selectedEffectImage;
+PImage heart;
+
+void loadEffectImages() {
+  heart = loadImage("heart.png");
+  
+  selectedEffectImage = null;
+}
+
 void trackColor() {
   if (cam == null || cam.pixels == null) return; // Check if cam is available
 
@@ -32,8 +41,9 @@ void trackColor() {
     }
   }
   
-  fill(trackColor);
-  ellipse(closestX, closestY, 16, 16);
+  if (selectedEffectImage != null) {
+      image(selectedEffectImage, closestX, closestY, 50, 50);
+  }
 }
 
 void mousePressed() {
