@@ -49,7 +49,7 @@ void setup() {
   initializeWordsHashmap();
   
   // Initialize & load the images that would be used as effects on the face
-  loadEffectImages();
+  initializeImageHashmap();
 }
 
 void draw() {    
