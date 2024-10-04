@@ -10,6 +10,9 @@ Socket socket;
 BufferedWriter writer;
 BufferedReader reader;
 
+int canvasWidth = 1600;
+int canvasHeight = canvasWidth / 4 * 3;
+
 Capture cam;
 
 PFont emojiFont;
@@ -17,7 +20,7 @@ PFont emojiFont;
 int defaultFontSize = 32;
 
 void setup() {
-  size(800, 600);
+  size(1600, 1200);
   
   emojiFont = createFont("NotoColorEmoji-32.vlw", 32);
   textFont(emojiFont);
@@ -48,7 +51,6 @@ void setup() {
   // Initialize the words key-value pair that will be used to replace a word with its pair word
   initializeWordsHashmap();
   
-  // Initialize & load the images that would be used as effects on the face
   initializeImageHashmap();
 }
 
@@ -75,7 +77,7 @@ void draw() {
   fill(255);
   textSize(defaultFontSize);
   for (int i = 0; i < min(chatLog.size(), maxChatLogCount); i++) {
-    text(chatLog.get(chatLog.size() - 1 - i), 10, height - defaultFontSize * (i + 1));
+    text(chatLog.get(chatLog.size() - 1 - i), 10, defaultFontSize + (defaultFontSize *1.5)  * i);
   }
   
   trackColor();

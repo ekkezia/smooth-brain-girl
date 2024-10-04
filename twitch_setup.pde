@@ -45,5 +45,7 @@ void processChat(String line) {
     println(user + ": " + processedWord + "|| actual message: " +  message);
     
     sayWithSiri(message);
+    
+    processImage(message);
   }
 }

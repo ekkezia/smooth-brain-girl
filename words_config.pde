@@ -1,6 +1,5 @@
 HashMap<String, String> censoredWordsMap = new HashMap<String, String>();
 
-HashMap<String, PImage> censoredImageMap = new HashMap<String, PImage>(); 
 PImage selectedEffectImage;
 
 String[][] angelAffirmationWords = {
@@ -45,6 +44,57 @@ String[][] angelAffirmationWords = {
     {"Im a girl", "i'm just a girl🐇🎀"}
 };
 
-String[][] pngWords = {
-  {"love", "heart.png"}
+String[][] publicAffirmationWords = {
+    {"public", "#public☁️"},
 };
+
+String[] cuteWords = {
+  "cute"
+};
+
+String[] cuteImagePaths = {
+  "cute/animal stats.gif",
+    "cute/bunny ears.gif",
+  "cute/bunny flock 3.gif",
+  "cute/bunny twin jump.gif",
+  "cute/cat kissing.gif",
+  "cute/HK bow.gif",
+    "cute/HK peephole.gif",
+  "cute/paws.gif"
+};
+
+PImage[] cuteImages = new PImage[cuteImagePaths.length];
+
+String[] loveWords = {
+  "love"
+};
+
+String[] loveImagePaths = {
+  "love/heart full 2.gif",
+    "love/heart full 3.gif",
+  "love/heart full.gif",
+  "love/hearts float 2.gif",
+  "love/hearts frame 2.gif",
+  "love/hearts frame.gif",
+    "love/hello kitty lover.jpg",
+  "love/HK peephole.gif",
+    "love/two girls stack.gif"
+};
+
+PImage[] loveImages = new PImage[loveImagePaths.length];
+
+String[] ascendWords = {
+  "ascend"
+};
+
+String[] ascendImagePaths = {
+  "ascend/angel static.jpg",
+    "ascend/angel stats.gif",
+  "ascend/bubbles.gif",
+  "ascend/cloud frame.gif",
+  "ascend/HK fairy.gif",
+  "ascend/savior.gif",
+    "ascend/wing 1.gif",
+};
+
+PImage[] ascendImages = new PImage[ascendImagePaths.length];

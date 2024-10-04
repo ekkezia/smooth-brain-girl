@@ -2,15 +2,24 @@ void initializeWordsHashmap() {
   for (int i = 0; i < angelAffirmationWords.length; i++) {
     censoredWordsMap.put(angelAffirmationWords[i][0], angelAffirmationWords[i][1]);
   }
+  
+  for (int i = 0; i < publicAffirmationWords.length; i++) {
+    censoredWordsMap.put(publicAffirmationWords[i][0], publicAffirmationWords[i][1]);
+  }
 }
 
 void initializeImageHashmap() {
-  for (int i = 0; i < pngWords.length; i++) {
-    String word = pngWords[i][0];          
-    String imageFilename = pngWords[i][1];  
-    censoredImageMap.put(word, loadImage(imageFilename));
+  for (int i = 0; i < cuteImagePaths.length; i++) {
+    cuteImages[i] = loadImage(cuteImagePaths[i]); // Ensure filenames match
   }
- 
+  
+  for (int i = 0; i < loveImagePaths.length; i++) {
+    loveImages[i] = loadImage(loveImagePaths[i]); // Ensure filenames match
+  }
+  
+  for (int i = 0; i < ascendImagePaths.length; i++) {
+    ascendImages[i] = loadImage(ascendImagePaths[i]); // Ensure filenames match
+  }
 }
 
 String processWords(String input) {
@@ -19,15 +28,6 @@ String processWords(String input) {
 
   while (i < input.length()) {
     boolean matchFound = false;
-
-    // Check if the next part of the string matches any word in the censoredImageMap
-    for (String key : censoredImageMap.keySet()) {
-        if (input.toLowerCase().contains(key.toLowerCase())) {
-            println("Image effect triggered for: " + key);
-            selectedEffectImage = censoredImageMap.get(key);  // Set the effect image
-            matchFound = true; 
-        }
-    }
 
     // Check if the next part of the string matches any word in the censoredWordsMap
     for (String key : censoredWordsMap.keySet()) {
@@ -49,12 +49,25 @@ String processWords(String input) {
   return result.toString();
 }
 
-// Helper method to check if the word is in which category
-//boolean isBabyWord(String word) {
-//  for (String[] pair : angelAffirmationWords) {
-//    if (pair[0].equals(word)) {
-//      return true;
-//    }
-//  }
-//  return false;
-//}
+void processImage(String input) {
+   for (int i = 0; i < cuteWords.length; i++) {
+        if (input.toLowerCase().contains(cuteWords[i].toLowerCase())) {
+          println("contain input image");
+            selectedEffectImage = cuteImages[(int) random(cuteImages.length)];
+        }
+    }
+    
+       for (int i = 0; i < loveWords.length; i++) {
+        if (input.toLowerCase().contains(loveWords[i].toLowerCase())) {
+          println("contain input image");
+            selectedEffectImage = loveImages[(int) random(loveImages.length)];
+        }
+    }
+    
+       for (int i = 0; i < ascendWords.length; i++) {
+        if (input.toLowerCase().contains(ascendWords[i].toLowerCase())) {
+          println("contain input image");
+            selectedEffectImage = ascendImages[(int) random(ascendImages.length)];
+        }
+    }
+}
