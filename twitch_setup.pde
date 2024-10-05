@@ -44,7 +44,7 @@ void processChat(String line) {
     chatLog.add(user + ": " + processedWord);
     println(user + ": " + processedWord + "|| actual message: " +  message);
     
-    sayWithSiri(message);
+    //sayWithSiri(message);
     
     processImage(message);
   }

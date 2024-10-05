@@ -33,7 +33,7 @@ void trackColor() {
   }
   
   if (selectedEffectImage != null) {
-      image(selectedEffectImage, closestX, closestY, width, height);
+      image(selectedEffectImage, closestX, closestY, imageSize, imageSize);
   }
 }
 

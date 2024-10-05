@@ -39,7 +39,7 @@ void setup() {
       println(cameras[i]);
     }
     
-    // Set up the camera with the first available camera
+    // Set up the camera with the first available camera, replace with your choice of camera (depending on the index being listed in "Available cameras:")
     cam = new Capture(this, cameras[0]);
     cam.start();
   }
