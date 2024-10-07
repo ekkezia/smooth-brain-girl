@@ -1,8 +1,8 @@
 String server = "irc.chat.twitch.tv"; // Twitch IRC server
 int port = 6667; // Non-SSL port
-String nick = "nichestitution"; // Your Twitch username
-String oauth = "oauth:n6tv79rcp7r95e5jydrfwgq5rs6m0s"; // Your OAuth token with "oauth:" prefix
-String channel = "#nichestitution"; // Twitch channel (must include the #)
+String nick = "x"; // Your Twitch username
+String oauth = "oauth:x"; // Your OAuth token with "oauth:" prefix
+String channel = "#x"; // Twitch channel (must include the #)
 
 ArrayList<String> chatLog = new ArrayList<String>(); // Chat log to display
 
