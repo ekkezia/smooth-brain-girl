@@ -14,9 +14,9 @@ Capture cam;
 
 String server = "irc.chat.twitch.tv"; // Twitch IRC server
 int port = 6667; // Non-SSL port
-String nick = "ek3zia"; // Your Twitch username
-String oauth = "oauth:fv3vw4w7drsvqo8xgxx53atdnt6j3e"; // Your OAuth token with "oauth:" prefix
-String channel = "#ek3zia"; // Twitch channel (must include the #)
+String nick = "x"; // Your Twitch username
+String oauth = "oauth:x"; // Your OAuth token with "oauth:" prefix
+String channel = "#x"; // Twitch channel (must include the #)
 
 String lastMessage = ""; // Last chat message
 ArrayList<String> chatLog = new ArrayList<String>(); // Chat log to display
